@@ -1,6 +1,5 @@
-<h1>Editing pun</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @pun %> |
-<%= link_to 'Back', puns_path %>
+<%- model_class = Pun -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Pun %></h1>
+</div>
+<%= render :partial => 'form' %>
