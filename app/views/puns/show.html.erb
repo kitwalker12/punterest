@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @pun.body %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @pun.user %>
+</p>
+
+<%= link_to 'Edit', edit_pun_path(@pun) %> |
+<%= link_to 'Back', puns_path %>
