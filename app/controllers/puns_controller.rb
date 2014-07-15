@@ -29,6 +29,7 @@ class PunsController < ApplicationController
   # POST /puns.json
   def create
     @pun = Pun.new(pun_params)
+    @pun.user = current_user
 
     respond_to do |format|
       if @pun.save
