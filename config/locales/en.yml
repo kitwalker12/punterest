@@ -21,3 +21,20 @@
 
 en:
   hello: "Hello world"
+  cancel: "Cancel"
+  actions: "Actions"
+  confirm: "Sure?"
+  destroy: "Delete"
+  new: "New"
+  back: "Back"
+  edit: "Edit"
+  helpers:
+    links:
+      cancel: "Cancel"
+      show: "Show"
+      confirm: "Sure?"
+      destroy: "Delete"
+      new: "New"
+      back: "Back"
+      edit: "Edit"
+    actions: "Actions"

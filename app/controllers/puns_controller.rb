@@ -1,7 +1,7 @@
 class PunsController < ApplicationController
 
   #->Prelang (scaffolding:rails/scope_to_user)
-  before_filter :require_user_signed_in, only: [:new, :edit, :create, :update, :destroy]
+  before_filter :require_user_signed_in, only: [:edit, :update, :destroy, :vote]
 
   before_action :set_pun, only: [:show, :edit, :update, :destroy, :vote]
 
@@ -29,7 +29,7 @@ class PunsController < ApplicationController
   # POST /puns.json
   def create
     @pun = Pun.new(pun_params)
-    @pun.user = current_user
+    @pun.user = current_user if user_signed_in?
 
     respond_to do |format|
       if @pun.save
@@ -94,6 +94,6 @@ class PunsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pun_params
-      params.require(:pun).permit(:body, :user_id)
+      params.require(:pun).permit(:body, :credit, :user_id)
     end
 end
