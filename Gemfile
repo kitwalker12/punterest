@@ -26,6 +26,9 @@ group :test do
   gem 'database_cleaner'
 end
 
+gem 'bower-rails'
+gem 'angular-rails-templates'
+
 gem 'acts_as_votable', github: 'ryanto/acts_as_votable'
 gem 'binding_of_caller'
 gem 'devise', github: 'plataformatec/devise'
